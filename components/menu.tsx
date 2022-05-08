@@ -2,12 +2,21 @@
    
 import { Menu } from "antd";
 import { NextComponentType } from "next";
+import Link from "next/link";
 
 const MainMenu:NextComponentType = () => {
 
     const items = [
-        { label: 'All Event', key: 'main' },
-        { label: 'Create Event', key: 'create-event' },
+        { label: (
+            <Link href={'/'}>
+              All Event
+            </Link>
+          ), key: 'main' },
+        { label: (
+            <Link href={'/create-event'}>
+              Create Event
+            </Link>
+          ), key: 'create-event',  },
       ];
 
     return (
