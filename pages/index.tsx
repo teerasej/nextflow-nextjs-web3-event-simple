@@ -7,10 +7,17 @@ import { useEffect } from 'react'
 
 const Home: NextPage = () => {
 
+  const injectedConnector = new InjectedConnector({ supportedChainIds: [1, 3, 4, 5, 42,1337], })
+  const { chainId, account, activate, active, library } = useWeb3React<Web3Provider>()
+
   const onClick = () => {
+    activate(injectedConnector)
   }
 
-
+  useEffect(() => {
+    // show chainID, account and active status
+    console.log(chainId, account, active)
+  });
 
 
 
