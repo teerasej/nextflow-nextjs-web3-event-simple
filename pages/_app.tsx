@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Web3ReactProvider getLibrary={getLibrary}>
       <div style={{ padding: 100 }}>
         <h1>Next Event</h1>
-        <MainMenu />
+        {/* <MainMenu /> */}
         <Component {...pageProps} />
       </div>
     </Web3ReactProvider>
